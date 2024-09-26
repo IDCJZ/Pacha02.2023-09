@@ -1,0 +1,15 @@
+{
+    "productos": [
+      {
+        "id": 1,
+        "cantidad": 2
+      },
+      {
+        "id": 2,
+        "cantidad": 1
+      }
+    ],
+    "direccion_envio": "Calle Principal 123",
+    "metodo_pago": "Tarjeta de Crédito"
+  }
+  

@@ -1,0 +1,18 @@
+<script>
+var num1 = parseInt(prompt("Ingrese el primer número:"));
+var num2 = parseInt(prompt("Ingrese el segundo número:"));
+var num3 = parseInt(prompt("Ingrese el tercer número:"));
+
+// Verificar si los números son válidos (enteros)
+if (Number.isNaN(num1) || Number.isNaN(num2) || Number.isNaN(num3)) {
+  alert("Por favor, ingrese tres números enteros válidos.");
+} else {
+  // Ordenar los números de menor a mayor
+  var numerosOrdenados = [num1, num2, num3].sort(function(a, b) {
+    return a - b;
+  });
+
+  // Mostrar los números ordenados
+  alert("Los números ordenados de menor a mayor son: " + numerosOrdenados.join(", "));
+}
+</script>

@@ -1,0 +1,13 @@
+PREGUNTAS:
+-  ¿Cómo defines una función?
+La forma más común es utilizando la declaración de función (function declaration).
+También puedes definir funciones que acepten parámetros, además de la declaración de función, también 
+puedes utilizar expresiones de función (function expressions) y funciones flecha (arrow functions) 
+para definir funciones en JavaScript.
+
+
+-  ¿Hasta cuantos argumentos puedes declarar en una función?
+El número de argumentos que puedes declarar en una función en JavaScript es teóricamente ilimitado.
+JavaScript te permite declarar una gran cantidad de argumentos en una función, es recomendable mantenerlos
+en un número razonable para facilitar la lectura y el mantenimiento de tu código.
+

@@ -1,0 +1,27 @@
+<script>
+    // Leer la cantidad de horas trabajadas
+var horasTrabajadas = parseInt(prompt("Ingrese la cantidad de horas trabajadas en la semana:"));
+
+// Definir la tarifa estándar por hora y la tarifa de horas extras
+var tarifaHoraNormal = 20;
+var tarifaHoraExtra = 25;
+
+// Inicializar el sueldo semanal
+var sueldoSemanal = 0;
+
+// Calcular el sueldo basado en las horas trabajadas
+if (horasTrabajadas <= 40) {
+  sueldoSemanal = horasTrabajadas * tarifaHoraNormal;
+} else {
+  // Calcular las horas normales (primeras 40 horas)
+  var horasNormales = 40;
+  var horasExtras = horasTrabajadas - horasNormales;
+
+  // Calcular el sueldo con horas normales y horas extras
+  sueldoSemanal = (horasNormales * tarifaHoraNormal) + (horasExtras * tarifaHoraExtra);
+}
+
+// Mostrar el sueldo semanal
+alert("El sueldo semanal del trabajador es: $" + sueldoSemanal);
+
+</script>

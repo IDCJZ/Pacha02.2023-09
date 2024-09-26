@@ -1,0 +1,12 @@
+[{
+  "_id": {
+    "$oid": "655900c4d409ccdb930223a7"
+  },
+  "Nombre": "Madera",
+  "Cantidad": 15,
+  "Costo": 20,
+  "fecha": "2023-11-16",
+  "id_Proveedor": {
+    "$oid": "6558f562d409ccdb930223a4"
+  }
+}]

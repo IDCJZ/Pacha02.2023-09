@@ -1,0 +1,39 @@
+Proceso ejercicio32
+Escribir "	provincia tacna= 1 - provincia puno= 2 - provincia tarma= 3"
+	Leer DIGITAR
+	Segun DIGITAR Hacer
+		1:
+			Escribir "CIUDADES DE TACNA"
+			CUIDAD1<-234
+			CUIDAD2<-2435
+			CUIDAD3<-1231
+			CUIDAD11<-1211
+			TACNA<-CUIDAD1+CUIDAD2+CUIDAD3+CUIDAD11
+		2:
+			Escribir "CIUDADES DE PUNO"
+			CUIDAD4<-3444
+			CUIDAD5<-342
+			CUIDAD6<-1211
+			PUNO<-CUIDAD4 +CUIDAD5 + CUIDAD6
+		3:
+			Escribir "CIUDADES DE TARMA"
+			CUIDAD7=123;
+			CUIDAD8=2454;
+			CUIDAD9=1234;
+			CUIDAD10<-1211
+			TARMA= CUIDAD7+CUIDAD8+CUIDAD9+CUIDAD10
+		De Otro Modo:
+			Escribir "LA CUIDAD NO EXISTE"
+	Fin Segun
+	Si TARMA>PUNO Y TARMA > TACNA Entonces
+		Escribir "LA CIUDAD DE TARMA ES LA MAS POBLADA"
+	SiNo
+		Si PUNO>TARMA Y PUNO>TACNA Entonces
+			Escribir "LA CIUDAD DE PUNO ES LA MAS POBLADA"
+		SiNo
+			Si TACNA>PUNO Y TACNA>TARMA Entonces
+				Escribir "LA CIUDAD DE TACNA ES LA MAS POBLADA"
+			Fin Si
+		Fin Si
+	Fin Si
+FinProceso

@@ -1,0 +1,36 @@
+El modelo relacional es un enfoque fundamental en el campo de la gestión de bases de datos, 
+diseñado para organizar y gestionar datos de manera estructurada y eficiente. 
+Fue propuesto por Edgar F. Codd en 1970 y se ha convertido en el modelo de datos predominante 
+en la gestión de bases de datos relacionales.
+
+A continuación, se describen algunos de los conceptos clave y principios del modelo relacional:
+
+1. Tablas: 
+En el modelo relacional, los datos se almacenan en tablas, también conocidas como relaciones. Cada tabla consta de filas y columnas, donde las filas representan registros individuales y las columnas representan atributos o campos de datos.
+
+2. Claves primarias: 
+Cada tabla debe tener una clave primaria, que es un atributo único que identifica de manera única cada fila en la tabla. La clave primaria garantiza la integridad de los datos y facilita la recuperación de registros específicos.
+
+3. Relaciones: 
+El modelo relacional permite establecer relaciones entre tablas mediante claves foráneas. Estas relaciones permiten vincular datos de diferentes tablas y realizar consultas más complejas.
+
+4. Normalización: 
+La normalización es un proceso mediante el cual se organizan las tablas para eliminar la redundancia y mejorar la integridad de los datos. Esto se logra dividiendo las tablas en partes más pequeñas y relacionándolas adecuadamente.
+
+5. Consultas SQL: 
+Para interactuar con bases de datos relacionales, se utiliza un lenguaje de consulta llamado SQL (Structured Query Language). SQL permite realizar consultas, inserciones, actualizaciones y eliminaciones de datos de manera eficiente.
+
+6. Integridad referencial: 
+El modelo relacional es fuerte en cuanto a la integridad de los datos. Las bases de datos relacionales pueden definir reglas de integridad referencial que garantizan la consistencia de los datos y evitan la eliminación o modificación de registros relacionados de manera no autorizada.
+
+7. Transacciones: 
+El modelo relacional admite transacciones, que son unidades de trabajo que garantizan que las operaciones de la base de datos sean atómicas, consistentes, aisladas y duraderas (propiedades ACID). Esto es fundamental para la integridad de los datos en entornos de bases de datos empresariales.
+
+8. Escalabilidad y rendimiento: 
+Aunque el modelo relacional es excelente para mantener la integridad de los datos, puede haber desafíos en términos de escalabilidad y rendimiento en sistemas de alta demanda. En estos casos, se pueden utilizar técnicas como la indexación y la optimización de consultas.
+
+9. Sistemas de gestión de bases de datos relacionales (RDBMS): 
+Para implementar y administrar bases de datos relacionales, se utilizan sistemas de gestión de bases de datos relacionales (RDBMS). Ejemplos de RDBMS populares incluyen Oracle, MySQL, PostgreSQL y Microsoft SQL Server.
+
+El modelo relacional ha demostrado ser efectivo en una amplia variedad de aplicaciones, desde sistemas de gestión de inventarios hasta sistemas de información en línea. A pesar de la aparición de otros modelos de datos, como bases de datos NoSQL, 
+el modelo relacional sigue siendo una elección sólida cuando se requiere una estructura de datos organizada y relacional con garantías de integridad y consistencia.

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Persistente</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Chat Persistente</h1>
+
+  <div id="chat-container">
+    <ul id="chat-messages"></ul>
+  </div>
+
+  <form id="message-form">
+    <label for="usuario">Usuario:</label>
+    <input type="text" id="usuario" required>
+    <br>
+    <label for="mensaje">Mensaje:</label>
+    <input type="text" id="mensaje" required>
+    <br>
+    <button type="submit">Enviar Mensaje</button>
+  </form>
+
+  <button id="clear-history">Borrar Historial</button>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

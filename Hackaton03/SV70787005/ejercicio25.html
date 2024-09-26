@@ -1,0 +1,20 @@
+<script>
+    // Leer el dividendo y el divisor del usuario
+var dividendo = parseInt(prompt("Ingrese el dividendo:"));
+var divisor = parseInt(prompt("Ingrese el divisor:"));
+
+// Inicializar variables para el cociente y el resto
+var cociente = 0;
+var resto = dividendo;
+
+// Calcular el cociente y el resto mediante restas sucesivas
+while (resto >= divisor) {
+  resto -= divisor;
+  cociente++;
+}
+
+// Mostrar el cociente y el resto
+console.log("El cociente es: " + cociente);
+console.log("El resto es: " + resto);
+
+</script>

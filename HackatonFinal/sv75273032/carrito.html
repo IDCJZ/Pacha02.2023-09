@@ -1,0 +1,75 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentación de API - Tienda Virtual</title>
+    
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/swagger-ui-dist@3.52.3/swagger-ui.css">
+    <style>
+       
+        #carrito-container {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        #carrito-lista {
+            list-style: none;
+            padding: 0;
+        }
+        #carrito-lista li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="swagger-ui"></div>
+
+    <!-- Nuevo contenedor para el carrito -->
+    <div id="carrito-container">
+        <h2>Carrito de Compras</h2>
+        <ul id="carrito-lista"></ul>
+        <p>Total: <span id="total-carrito">0.00</span> USD</p>
+        <button onclick="realizarCompra()">Realizar Compra</button>
+    </div>
+
+    <script src="https://unpkg.com/swagger-ui-dist@3.52.3/swagger-ui-bundle.js"></script>
+    <script src="https://unpkg.com/swagger-ui-dist@3.52.3/swagger-ui-standalone-preset.js"></script>
+
+    <!-- Referencia al archivo JavaScript -->
+    <script src="ruta-a-tu-archivo/ecommmerce.js"></script>
+
+    <script>
+      
+        const ui = SwaggerUIBundle({
+           
+
+            
+            onComplete: function () {
+                const botonesProbar = document.querySelectorAll('.opblock-control__btn');
+
+                botonesProbar.forEach(function (boton) {
+                    boton.addEventListener('click', function () {
+                        
+                        const producto = {
+                            id: obtenerIdProducto(), 
+                            nombre: obtenerNombreProducto(), 
+                            precio: obtenerPrecioProducto(), 
+                        };
+
+                        
+                        agregarAlCarrito(producto);
+                    });
+                });
+            },
+        });
+
+        
+
+    </script>
+
+</body>
+</html>

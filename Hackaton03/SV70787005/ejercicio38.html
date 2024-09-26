@@ -1,0 +1,24 @@
+<script>
+    // Definir el número de términos en la serie (cuantos más términos, mayor precisión)
+var numTerminos = parseInt(prompt("Ingrese la cantidad de términos para la aproximación de Pi:"));
+
+// Inicializar el valor de Pi
+var pi = 3; // El primer término es 3
+
+// Inicializar el valor que se alternará entre 4 y -4
+var alternador = 1;
+
+// Inicializar el denominador base
+var denominador = 2;
+
+// Calcular la aproximación de Pi utilizando la serie de Nilakantha
+for (var i = 0; i < numTerminos; i++) {
+  pi += alternador * (4 / (denominador * (denominador + 1) * (denominador + 2)));
+  alternador *= -1; // Alternar entre 4 y -4
+  denominador += 2; // Aumentar el denominador en 2
+}
+
+// Mostrar la aproximación de Pi
+alert("La aproximación de Pi con " + numTerminos + " términos de la serie de Nilakantha es: " + pi);
+
+</script>

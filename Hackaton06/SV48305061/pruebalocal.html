@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="Estilo.css">
+</head>
+
+<body>
+    <h1 >Tienda de  reparación</h1>
+    <h2 >Registro de Cliente: </h2>
+    Nombres: </br><input type="text" id="nombres"></br>
+    Apellidos: </br><input type="text" id="apellidos"></br>
+    DNI: </br><input type="text" id="dnis"></br>
+    Marca del telefono: </br><input type="text" id="marcas"></br>
+    Codigo de IMEI: </br><input type="text" id="imeis"><input type="button" id="validacion_imei" value="Validar"></br>
+    <div id="mirar_imei"></div>
+    </br><input type="button" id="boton" value="Registrar"></br>
+    <div id="registro_nombre"></div>
+    <div id="registro_apellido"></div>
+    <div id="registro_dni"></div>
+    <div id="registro_marca"></div>
+    <div id="registro_imei"></div>
+    <h2>Primera Revision: </h2>
+    Escriba el primer diagnostico: </br><input type="text" id="diagnostico1"></br>
+    </br><input type="button" id="insertar_diagnostico" value="Insertar Diagnostico"></br>
+    <div id="ver_diagnostico"></div>
+    <h2>Pagos</h2>
+    Pago: </br><input type="text" id="pago1"></br>
+    Pago del cliente: </br><input type="text" id="pago_cliente"></br>
+    </br><input type="button" id="boton_pago" value="Pagar">
+    <div id="registro_pago"></div>
+    <div id="registro_pago_cliente"></div>
+    <h2>Asingar un tecnico</h2>
+    <input type="button" id="insertar_tecnico" value="Asignar">
+    <div id="ver_tecnico"></div></br>
+    <input type="button" id="vdiagnostico" value="Ver Diagnostico">
+    <div id="diagnostico"></div></br>
+    Cobro de repuestos: </br><input type="text" id="pagar_repuestos"></br>
+</br><input type="button" id="irepuestro" value="Insertar Cobro adicional"></br>
+<h2>Pagos de deudas</h2>
+<input type="button" id="vdeuda" value="Ver Deuda del cliente"></br>
+    <div id="deuda"></div></br>
+Pago de deuda: </br><input type="text" id="pagar_deuda"></br>
+</br><input type="button" id="ideuda" value="Insertar pago"></br>
+<div id="verdeuda"></div>
+</body>
+<script src="localstorage.js"></script>
+
+</html>

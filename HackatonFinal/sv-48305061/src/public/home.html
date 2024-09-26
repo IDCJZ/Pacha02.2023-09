@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <title>Carrito de Compras</title>
+    <style>
+        .product-image {
+            width: 100px;
+            height: auto;
+        }
+
+        #card-element {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Mis Productos</h1>
+    <table id="productos">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Imagen</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="producto-body"></tbody>
+    </table>
+
+    <div id="card-element"></div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var stripe = Stripe('pk_test_51OWTG5HprWy3pRlbyiDU0eoJGeQzX7gJb8crqCQRAZysHvIL0StNYGV8df4bInY2VZBLsXRmE9xDuJKKQ9eLmwQZ00bB9eylOt');
+            var elements = stripe.elements();
+            var cardElement = elements.create('card');
+
+            var cardMountPoint = document.getElementById('card-element');
+            if (cardMountPoint) {
+                cardElement.mount(cardMountPoint);
+            }
+
+            function manejarError(error) {
+                console.error('Error:', error);
+            }
+
+            async function procesarPago(paymentMethodId, productId, total) {
+                try {
+                    const response = await $.ajax({
+                        url: '/procesar-pago',
+                        method: 'POST',
+                        contentType: 'application/json',
+                        data: JSON.stringify({
+                            payment_method_id: paymentMethodId,
+                            product_id: productId,
+                            total: total,
+                        }),
+                    });
+
+                    if (response.success) {
+                        alert('Pago exitoso. ¡Gracias por tu compra!');
+                    } else {
+                        console.error('Error al procesar el pago:', response.error);
+                        alert('Hubo un error al procesar el pago. Por favor, intenta nuevamente.');
+                    }
+                } catch (error) {
+                    console.error('Error al procesar el pago:', error);
+                    alert('Hubo un error al procesar el pago. Por favor, intenta nuevamente.');
+                }
+            }
+
+            function cargarProductos() {
+                try {
+                    $.get('/productos', function (data) {
+                        if (data.length > 0) {
+                            data.forEach(function (producto) {
+                                let row = $('<tr>');
+                                row.append(`<td>${producto.nombre}</td>`);
+                                row.append(`<td>${producto.precio}</td>`);
+                                row.append(`<td><img src="${producto.imagen}" alt="${producto.nombre}" class="product-image"></td>`);
+                                row.append(`<td><button class="pagarProducto" data-id="${producto.id}" data-precio="${producto.precio}">Pagar</button></td>`);
+                                $('#producto-body').append(row);
+                            });
+                        } else {
+                            $('#producto-body').html('<tr><td colspan="4">No hay productos disponibles</td></tr>');
+                        }
+                    });
+                } catch (error) {
+                    manejarError(error);
+                }
+            }
+
+            cargarProductos();
+
+            // Cambié el evento de clic al botón de pago
+            $(document).on('click', '.pagarProducto', async function () {
+                var productId = $(this).data('id')
+                var productPrice = $(this).data('precio'); // Agrega esta línea para obtener el precio del producto
+
+                try {
+                    // Crea el método de pago
+                    const { paymentMethod, error } = await stripe.createPaymentMethod({
+                        type: 'card',
+                        card: cardElement,
+                    });
+
+                    if (error) {
+                        console.error('Error al obtener el método de pago:', error);
+                        alert('Hubo un error al procesar el pago. Por favor, intenta nuevamente.');
+                        return;
+                    }
+
+                    procesarPago(paymentMethod.id, [productId], productPrice);
+                } catch (error) {
+                    console.error('Error al crear el método de pago:', error);
+                    alert('Hubo un error al procesar el pago. Por favor, intenta nuevamente.');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

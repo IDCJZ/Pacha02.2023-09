@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Reparación de Celulares</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Sistema de Reparación de Celulares</h1>
+
+  <h2>Registrar un Teléfono</h2>
+  <form id="phoneForm">
+    <label for="serial">Número de Serie:</label>
+    <input type="text" id="serial" required>
+    <br>
+    <label for="imei">IMEI:</label>
+    <input type="text" id="imei" required>
+    <br>
+    <label for="marca">Marca:</label>
+    <input type="text" id="marca" required>
+    <br>
+    <label for="modelo">Modelo:</label>
+    <input type="text" id="modelo" required>
+    <br>
+    <button type="submit">Registrar Teléfono</button>
+  </form>
+
+  <h2>Registro de Técnico</h2>
+  <form id="technicianForm">
+    <label for="nombreTecnico">Nombre del Técnico:</label>
+    <input type="text" id="nombreTecnico" required>
+    <br>
+    <label for="skillsTecnico">Skills (separados por comas):</label>
+    <input type="text" id="skillsTecnico" required>
+    <br>
+    <button type="submit">Registrar Técnico</button>
+  </form>
+
+  <h2>Estado del Sistema</h2>
+  <div id="systemStatus"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

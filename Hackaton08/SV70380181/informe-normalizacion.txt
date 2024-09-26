@@ -1,0 +1,26 @@
+Normalización de Base de Datos
+El obejtivo principal de la Normalización de base de datos es organizar los datos de manera eficiente y eliminar la redundancia, 
+lo que a su vez mejora la integridad de los datos y facilita su mantenimiento y consulta. 
+La normalización se basa en una serie de reglas y directrices, generalmente expresadas en términos de formas normales, que ayudan a estructurar
+las tablas de la base de datos de manera que cumplan con ciertos estándares de calidad.
+
+Primera Forma Normal (1NF):
+En esta forma normal, los datos se dividen en tablas relacionadas de manera que no haya repeticiones de datos en una misma fila (registro). 
+Cada tabla debe tener una clave primaria única que identifica de manera única cada fila.
+
+Segunda Forma Normal (2NF): 
+La 2NF se alcanza cuando una tabla cumple con la 1NF y, además,todos los atributos no clave dependen completamente de la clave primaria. 
+Esto significa que no debe haber dependencias parciales de atributos no clave con respecto a la clave primaria.
+
+Tercera Forma Normal (3NF): 
+Una tabla está en 3NF si cumple con la 2NF y si no existen dependencias transitivas entre los atributos no clave y la clave primaria. 
+Esto significa que los atributos no clave deben depender directamente de la clave primaria y no a través de otros atributos no clave.
+
+Existen formas normales adicionales, como la Forma Normal de Boyce-Codd (BCNF) y la Cuarta Forma Normal (4NF), que se utilizan para tratar situaciones más específicas y complejas de normalización.
+
+La normalización de bases de datos es esencial para garantizar la integridad de los datos, 
+reducir la redundancia y mejorar el rendimiento de las consultas. 
+Sin embargo, es importante tener en cuenta que la normalización puede llevar a un mayor número de tablas y relaciones, 
+lo que puede complicar el diseño y la gestión de la base de datos. 
+Por lo tanto, es necesario encontrar un equilibrio entre la normalización y la simplificación del diseño, 
+según las necesidades y los requisitos del sistema.

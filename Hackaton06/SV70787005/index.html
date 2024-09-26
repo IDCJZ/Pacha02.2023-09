@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reparacion de Celulares</title>
+    <!-- INICIO BOOTSTRAP -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous">
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+<!-- FIN BOOTSTRAP -->
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><i class="fa-solid fa-wrench"></i> Phone Fix</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Phone Fix</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-house"></i> Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-building"></i> Sobre Nostros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-store"></i> Sucursales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-address-book"></i> Contacto</a>
+                        </li>
+                        <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li> -->
+                        <hr>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./login.html"><i class="fa-solid fa-right-to-bracket"></i> Iniciar Sesion</a>
+                        </li>
+                    </ul>
+                    <form type="POST" class="d-flex mt-3" id="frm_consultar_tramite">
+                        <input class="form-control me-2" type="text" id="inpt_cod_tram" placeholder="Codigo de consulta" autocomplete="off">
+                        <button class="btn btn-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+
+        <section class="py-5 text-center container mt-5">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-light">Reparacion de Celulares</h1>
+                    <p class="lead text-body-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat similique consequuntur odio sed voluptatem quis, quaerat qui saepe expedita cupiditate doloribus nihil voluptates explicabo. Aliquam non neque itaque tempore quidem.</p>
+                    <p>
+                        <!-- <a href="#" class="btn btn-primary my-2">Solicitar</a> -->
+                        <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Solicitar Servicio
+                        </button> -->
+                        <a title="Iniciar Sesion como administrador" href="./login.html" class="btn btn-danger">
+                            Soy Administrador
+                        </a>
+                        <!-- <a href="#" class="btn btn-secondary my-2">Consultar</a> -->
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="album py-5 bg-body-tertiary">
+            <div class="container">
+
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                                preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
+                                    fill="#eceeef" dy=".3em">Thumbnail</text>
+                            </svg>
+                            <div class="card-body">
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quaerat sapiente harum obcaecati nostrum! Iste perferendis commodi delectus explicabo illo tempore, unde natus autem eius dicta eveniet sint totam quod!</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    </div>
+                                    <small class="text-body-secondary">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                                preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
+                                    fill="#eceeef" dy=".3em">Thumbnail</text>
+                            </svg>
+                            <div class="card-body">
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quaerat sapiente harum obcaecati nostrum! Iste perferendis commodi delectus explicabo illo tempore, unde natus autem eius dicta eveniet sint totam quod!</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    </div>
+                                    <small class="text-body-secondary">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                                preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
+                                    fill="#eceeef" dy=".3em">Thumbnail</text>
+                            </svg>
+                            <div class="card-body">
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quaerat sapiente harum obcaecati nostrum! Iste perferendis commodi delectus explicabo illo tempore, unde natus autem eius dicta eveniet sint totam quod!</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    </div>
+                                    <small class="text-body-secondary">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                                preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
+                                    fill="#eceeef" dy=".3em">Thumbnail</text>
+                            </svg>
+                            <div class="card-body">
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quaerat sapiente harum obcaecati nostrum! Iste perferendis commodi delectus explicabo illo tempore, unde natus autem eius dicta eveniet sint totam quod!</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    </div>
+                                    <small class="text-body-secondary">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                                preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
+                                    fill="#eceeef" dy=".3em">Thumbnail</text>
+                            </svg>
+                            <div class="card-body">
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quaerat sapiente harum obcaecati nostrum! Iste perferendis commodi delectus explicabo illo tempore, unde natus autem eius dicta eveniet sint totam quod!</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    </div>
+                                    <small class="text-body-secondary">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                                preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
+                                    fill="#eceeef" dy=".3em">Thumbnail</text>
+                            </svg>
+                            <div class="card-body">
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quaerat sapiente harum obcaecati nostrum! Iste perferendis commodi delectus explicabo illo tempore, unde natus autem eius dicta eveniet sint totam quod!</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    </div>
+                                    <small class="text-body-secondary">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                                preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
+                                    fill="#eceeef" dy=".3em">Thumbnail</text>
+                            </svg>
+                            <div class="card-body">
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quaerat sapiente harum obcaecati nostrum! Iste perferendis commodi delectus explicabo illo tempore, unde natus autem eius dicta eveniet sint totam quod!</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    </div>
+                                    <small class="text-body-secondary">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                                preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
+                                    fill="#eceeef" dy=".3em">Thumbnail</text>
+                            </svg>
+                            <div class="card-body">
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quaerat sapiente harum obcaecati nostrum! Iste perferendis commodi delectus explicabo illo tempore, unde natus autem eius dicta eveniet sint totam quod!</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    </div>
+                                    <small class="text-body-secondary">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div><div class="col">
+                        <div class="card shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                                preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
+                                    fill="#eceeef" dy=".3em">Thumbnail</text>
+                            </svg>
+                            <div class="card-body">
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quaerat sapiente harum obcaecati nostrum! Iste perferendis commodi delectus explicabo illo tempore, unde natus autem eius dicta eveniet sint totam quod!</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    </div>
+                                    <small class="text-body-secondary">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Reparacion de Celular</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+            <form id="frm_validar_iemi">
+                <label for="">Numero IMEI</label>
+                <input type="text" class="form-control" required id="inp_nro_imei" name="inp_nro_imei" autocomplete="off">
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="submit" class="btn btn-primary">Consultar</button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+    <footer class="text-body-secondary py-5">
+        <div class="container">
+            <p class="float-end mb-1">
+                <a href="#">Back to top</a>
+            </p>
+            <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis commodi neque nulla numquam ipsum hic iusto explicabo. Eaque ipsum perspiciatis assumenda rerum cumque, sunt nihil, suscipit, reprehenderit neque autem quisquam.</p>
+            <p class="mb-0">Developed by <a href="https://gerardogp.github.io/" target="_blank">gegp</a></p>
+        </div>
+    </footer>
+    <script src="./app/database.js"></script>
+    <script>
+        const data = new Database();
+        $("#frm_consultar_tramite").submit(function(e){
+            e.preventDefault();
+            let codigo = $("#inpt_cod_tram").val()
+            let res = data.buscarReparacionByTramite(codigo);
+            console.log(res)
+            if (res.length > 0) {
+                Swal.fire({
+                    icon : "success",
+                    title : "Resultado de la Busqueda",
+                    text : `El CELULAR se encuentra en ${res[0].estado}`
+                })
+            }else{
+                Swal.fire({
+                    icon : "warning",
+                    title : "Ups!",
+                    text : `No se encontró reparaciones con el codigo ${codigo}`
+                })
+            }
+        })
+    </script>
+</body>
+</html>

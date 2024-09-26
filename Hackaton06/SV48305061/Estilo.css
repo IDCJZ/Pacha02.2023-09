@@ -1,0 +1,30 @@
+h1:hover {
+   animation: 0.3s Tiendadereparación infinite; 
+}
+@keyframes Tiendadereparación {
+    0%{
+        text-shadow: rgb(195, 0, 255) 4px 0, rgb(201, 81, 25) -4px 0; 
+    }
+    50%{
+        text-shadow: rgb(146, 52, 158) -4px 0, rgb(201, 104, 25) 4px 0; 
+    }
+    100%{
+        text-shadow: rgb(204, 0, 255) 4px 0,rgb(201, 131, 25) -4px 0; 
+    }
+}
+
+h1 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif}
+h2:hover {
+    animation: 0.3s Tiendadereparación infinite; 
+ }
+ @keyframes Tiendadereparación {
+     0%{
+         text-shadow: rgb(0, 225, 255) 4px 0, rgb(201, 81, 25) -4px 0; 
+     }
+     50%{
+         text-shadow: rgb(52, 158, 158) -4px 0, rgb(201, 104, 25) 4px 0; 
+     }
+     100%{
+         text-shadow: rgb(0, 255, 255) 4px 0,rgb(201, 131, 25) -4px 0; 
+     }}

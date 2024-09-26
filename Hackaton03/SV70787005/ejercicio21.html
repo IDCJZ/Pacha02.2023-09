@@ -1,0 +1,16 @@
+<script>
+    // Leer el valor de n del usuario
+var n = parseInt(prompt("Ingrese un número entero positivo (n):"));
+
+// Validar que n sea un número entero positivo
+if (isNaN(n) || n <= 0) {
+  alert("Por favor, ingrese un número entero positivo válido.");
+} else {
+  // Calcular la suma de los n primeros números usando la fórmula
+  var suma = (n * (n + 1)) / 2;
+
+  // Mostrar la suma de los n primeros números
+  console.log("La suma de los primeros " + n + " números es: " + suma);
+}
+
+</script>

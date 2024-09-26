@@ -1,0 +1,16 @@
+[{
+  "_id": {
+    "$oid": "655a7b44dcc303aaa25c8fc8"
+  },
+  "Nombre": "Ropero",
+  "Insumos": {
+    "$oid": "655a767adcc303aaa25c8fc6"
+  },
+  "Materia_Prima": {
+    "$oid": "655900c4d409ccdb930223a7"
+  },
+  "Operador": {
+    "$oid": "6558d1d0d409ccdb930223a3"
+  },
+  "Fecha": "2023-11-19"
+}]

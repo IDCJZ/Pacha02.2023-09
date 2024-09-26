@@ -1,0 +1,29 @@
+<script>
+    // Función para verificar si un número es perfecto
+function esNumeroPerfecto(numero) {
+  if (numero <= 0) {
+    return false; // Los números negativos y cero no son perfectos
+  }
+
+  var sumaDivisores = 0;
+
+  for (var i = 1; i < numero; i++) {
+    if (numero % i === 0) {
+      sumaDivisores += i;
+    }
+  }
+
+  return sumaDivisores === numero;
+}
+
+// Leer un número del usuario
+var numero = parseInt(prompt("Ingrese un número para verificar si es perfecto:"));
+
+// Verificar si el número es perfecto
+if (esNumeroPerfecto(numero)) {
+  alert(numero + " es un número perfecto.");
+} else {
+  alert(numero + " no es un número perfecto.");
+}
+
+</script>

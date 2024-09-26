@@ -1,0 +1,177 @@
+{
+    "bloqueados":[
+      {
+        "operador": "claro",
+        "imei": "028403243",
+        "motivo": "perdida"
+      },
+      {
+        "operador": "movistar",
+        "imei": "028403242",
+        "motivo": "perdida"
+      },
+      {
+        "operador": "bitel",
+        "imei": "028403240",
+        "motivo": "perdida"
+      },
+      {
+        "operador": "entel",
+        "imei": "11111028403246",
+        "motivo": "perdida"
+      }
+    ],
+    "clientes":[
+      {
+        "id" : 1,
+        "apellidos" : "GARIBAY PALOMINO",
+        "nombres" : "GERARDO ENRIQUE",
+        "dni" : "70787005",
+        "celular" : "959913931",
+        "correo" : "gerardo210299@gmail.com"
+      },
+      {
+        "id" : 2,
+        "apellidos" : "LOPEZ LOPEZ",
+        "nombres" : "LUISA",
+        "dni" : "70787006",
+        "celular" : "959913932",
+        "correo" : "lopez@gmail.com"
+      }
+    ],
+    "servicios":[
+      {
+        "id" : 2,
+        "cliente_id" : 1,
+        "pagos":[
+          {
+            "concepto" : "Primer Diagnostico",
+            "monto" : 26.00
+          },
+          {
+            "concepto" : "Todo",
+            "monto" : 46.50
+          }
+        ],
+        "diagnosticos" : [
+          {
+            "descripcion" : "Primer Diagnostico",
+            "fecha_registro" : "2023-10-22 08:12:45",
+            "monto" : 20.00
+          },
+          {
+            "descripcion" : "Segundo Diagnostico",
+            "fecha_registro" : "2023-10-23 08:12:45",
+            "monto" : 20.00
+          }
+        ],
+        "respuestos" : [
+          {
+            "tipo" : "Batería",
+            "cantidad" : 1,
+            "precio_unitario" : 290.00
+          },
+          {
+            "tipo" : "Pantalla LCD",
+            "cantidad" : 1,
+            "precio_unitario" : 120.00
+          }
+        ],
+        "codigo_solicitud" : "SOL0000002",
+        "imei" : "028403244",
+        "serie" : "00001235",
+        "marca":"XIAOMI",
+        "modelo":"NOTE 13",
+        "tecnico_id" : 1,
+        "pago_total" : 230.50
+      }
+    ],
+    "tecnico" : [
+      {
+        "id" : 1,
+        "nombre" : "JULIAN",
+        "codigo" : "TB0001",
+        "celular" : "99999999",
+        "skill" : [
+          {
+            "nombre" : "SANSUNG"
+          },
+          {
+            "nombre" : "SONY"
+          },
+          {
+            "nombre" : "LG"
+          },
+          {
+            "nombre" : "IPHONE"
+          },
+          {
+            "nombre" : "XIAOMI"
+          }
+        ]
+      },
+      {
+        "id" : 2,
+        "nombre" : "JORGE",
+        "codigo" : "TB0002",
+        "celular" : "99999998",
+        "skill" : [
+          {
+            "nombre" : "SANSUNG"
+          },
+          {
+            "nombre" : "SONY"
+          },
+          {
+            "nombre" : "LG"
+          },
+          {
+            "nombre" : "IPHONE"
+          },
+          {
+            "nombre" : "XIAOMI"
+          }
+        ]
+      },
+      {
+        "id" : 3,
+        "nombre" : "LUIS",
+        "codigo" : "TB0003",
+        "celular" : "99999997",
+        "skill" : [
+          {
+            "nombre" : "SANSUNG"
+          },
+          {
+            "nombre" : "SONY"
+          },
+          {
+            "nombre" : "LG"
+          },
+          {
+            "nombre" : "XIAOMI"
+          }
+        ]
+      },
+      {
+        "id" : 4,
+        "nombre" : "JULIA",
+        "codigo" : "TB0004",
+        "celular" : "99999996",
+        "skill" : [
+          {
+            "nombre" : "SANSUNG"
+          },
+          {
+            "nombre" : "SONY"
+          },
+          {
+            "nombre" : "LG"
+          },
+          {
+            "nombre" : "IPHONE"
+          }
+        ]
+      }
+    ]
+  }

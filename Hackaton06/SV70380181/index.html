@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" , type="text/css" href="style.css" />
+    <title>Web Storage</title>
+  </head>
+  <body>
+    <div class="container-title">
+      <h1 class="title">Servicios de celulares</h1>
+    </div>
+
+    <div class="imei-bloqueados-container">
+      <div class="container-table-imei-bloqueados">
+        <h2>Imei Bloqueados</h2>
+
+        <table id="imei-bloqueados-table" class="imei-bloqueados-table">
+          <thead>
+            <tr>
+              <th>Operador</th>
+
+              <th>Imei</th>
+
+              <th>Motivo</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <div class="container-imei-iloqueados">
+        <h2>Agregar imei Bloqueados</h2>
+        <form id="form-imei-bloqueados" class="container-form-bloqueados">
+          <div>
+            <label for="operador"> Operador:</label>
+            <input type="text" name="operador" id="operador" />
+          </div>
+          <div>
+            <label for="imei"> Imei:</label>
+            <input type="text" name="imei" id="imei" />
+          </div>
+          <div>
+            <label for="motivo"> Motivo:</label>
+            <input type="text" name="motivo" id="motivo" />
+          </div>
+          <button type="button" onclick="agregarImei()">Guarda Datos</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="mensaje-error">
+      <p>No completo todos los datos</p>
+    </div>
+    <script src="script.js"></script>
+    <script src="js2.js"></script>
+  </body>
+</html>

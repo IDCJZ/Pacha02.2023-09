@@ -1,0 +1,40 @@
+h2{
+    margin: 0 0 1rem 0;
+}
+.contenedor{
+    font-weight: bold;
+    background-color: #ddd9d7;
+    max-width: 70rem;
+    margin: 1rem auto;
+    padding: 2rem;
+}
+.centrado{
+    max-width: 30rem;
+    margin: 1rem auto;
+    text-align: center;
+}
+.btn-datos{
+    display: block;
+    margin-top: 1rem;
+}
+.ocultar{
+    display: none;
+}
+.formulario{
+    padding: 1rem 0;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    background-color: rgba(102, 136, 200, 0.5);
+}
+.campo{
+    text-align: center;
+    margin-top: 1rem;
+}
+.bloque{
+    display: block;
+    padding: 1rem;
+}
+
+
+

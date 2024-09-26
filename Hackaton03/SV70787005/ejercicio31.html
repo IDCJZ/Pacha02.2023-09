@@ -1,0 +1,39 @@
+<script>
+    // Definir un objeto que almacene los datos de población de cada ciudad en cada provincia
+var datosPoblacion = {
+  provincia1: {
+    ciudad1: 10000,
+    ciudad2: 15000,
+    // ...
+  },
+  provincia2: {
+    ciudad1: 12000,
+    ciudad2: 18000,
+    // ...
+  },
+  provincia3: {
+    ciudad1: 9000,
+    ciudad2: 20000,
+    // ...
+  }
+};
+
+// Inicializar variables para la ciudad con la población más grande
+var ciudadMasGrande = "";
+var poblacionMasGrande = 0;
+
+// Recorrer los datos de población para encontrar la ciudad con la población más grande
+for (var provincia in datosPoblacion) {
+  for (var ciudad in datosPoblacion[provincia]) {
+    var poblacion = datosPoblacion[provincia][ciudad];
+    if (poblacion > poblacionMasGrande) {
+      poblacionMasGrande = poblacion;
+      ciudadMasGrande = ciudad;
+    }
+  }
+}
+
+// Mostrar la ciudad con la población más grande
+alert("La ciudad con la población más grande es " + ciudadMasGrande + " con una población de " + poblacionMasGrande + " habitantes.");
+
+</script>

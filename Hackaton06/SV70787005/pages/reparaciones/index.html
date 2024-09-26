@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin :: Servicios</title>
+        <!-- INICIO BOOTSTRAP -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+            crossorigin="anonymous"></script>
+        <!-- FIN BOOTSTRAP -->
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><i class="fa-solid fa-wrench"></i>
+                    Phone Fix</a>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasDarkNavbar"
+                    aria-controls="offcanvasDarkNavbar"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1"
+                    id="offcanvasDarkNavbar"
+                    aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title"
+                            id="offcanvasDarkNavbarLabel">Phone Fix</h5>
+                        <button type="button" class="btn-close btn-close-white"
+                            data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul
+                            class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page"
+                                    href="../admin"><i class="fa-solid fa-house"></i>
+                                    Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../reparaciones"><i
+                                        class="fa-solid fa-building"></i> Reparaciones</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../tecnicos"><i class="fa-solid fa-address-book"></i> Tecnicos</a>
+                            </li>
+                            <hr>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../../"><i
+                                        class="fa-solid fa-right-to-bracket"></i>
+                                    Cerrar Sesion</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <br>
+        <br>
+        <main class="container vh-100 mt-5">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="./admin.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Reparaciones</li>
+                </ol>
+            </nav>
+            <br>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title">Reparaciones Registradas</span>
+                            <button class="btn btn-sm btn-primary float-end" onclick="$('#mdladdServicio').modal('show')"><i class="fa fa-plus"></i> Agregar</button>
+                        </div>
+                        <div class="card-body">
+                            <div class="overflow-auto">
+                                <table class="table table-striped">
+                                    <thead
+                                        style="background-color:#000064;color:white;">
+                                        <th>N°</th>
+                                        <th>Tramite</th>
+                                        <th>IMEI</th>
+                                        <th>Tecnico</th>
+                                        <th>Operador</th>
+                                        <th>Fecha de Registro</th>
+                                        <th>Editar</th>
+                                    </thead>
+                                    <tbody id="tbody_servicios">
+                                        <tr>
+                                            <td class="text-center" colspan="7">
+                                                <div class="spinner-border" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Modal -->
+        <div class="modal fade" id="mdladdServicio" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Servicio</h1>
+                        <button type="button" class="btn-close"
+                            data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul hidden class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link active" id="validarImeiTab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">IMEI</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link" id="1r_diagnostico" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">1R DIAGNOSTICO</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link" id="btn_pagos" data-bs-toggle="tab" data-bs-target="#reparacion_pago" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Pago</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                                <div class="form-group mt-3">
+                                <form id="frm_validar_imei">
+                                        <label for="">Numero IMEI</label>
+                                        <input type="text" minlength="9" maxlength="9" class="form-control" id="add_val_imei" name="add_val_imei" required>
+                                        <div id="HelpImei" class="form-text">
+                                            <a target="_blank" class="text-decoration-none" href="../admin">Ver lista de IMEI bloquedoas</a>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <button type="submit" class="btn btn-sm btn-primary mt-3">
+                                        <i class="fa fa-search"></i> Validar
+                                    </button>
+                                </form>
+                            </div>
+
+                            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                                <div class="form-group mt-3">
+                                <form id="frm_reg_diagnostico">
+                                        <label for="">Diagnostico</label>
+                                        <input type="text" class="form-control" id="add_diagnostico" name="add_diagnostico" required autocomplete="off">
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <label for="">Operador</label>
+                                        <select name="add_operador" id="add_operador" class="form-control" required>
+                                            <option value="" hidden>Seleccione</option>
+                                            <option value="Movistar">Movistar</option>
+                                            <option value="Entel">Entel</option>
+                                            <option value="Claro">Claro</option>
+                                            <option value="Bitel">Bitel</option>
+                                            <option value="Tuenti">Tuenti</option>
+                                            <option value="Telcel">Telcel</option>
+                                            <option value="Tim">Tim</option>
+                                            <option value="Nextel">Nextel</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <label for="">Tecnico</label>
+                                        <select name="add_tecnico_disponible" id="add_tecnico_disponible" class="form-control" required>
+                                            <option value="" hidden>Seleccione un operador</option>
+                                        </select>
+                                        <div id="HelpTecnicos" class="form-text">
+                                            <a target="_blank" class="text-decoration-none" href="../tecnicos">Ver lista de Tecnicos</a>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <button type="submit" class="btn btn-sm btn-primary mt-3">
+                                        <i class="fa fa-save"></i> Siguiente
+                                    </button>
+                                </form>
+                            </div>
+
+                            <div class="tab-pane fade" id="reparacion_pago" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                                <div class="form-group mt-3">
+                                <form id="frm_pago">
+                                    <label for="">Monto pagado</label>
+                                    <input type="number" class="form-control" id="add_monto" name="add_monto" required>
+                                </div>
+                                <div class="form-group mt-3">
+                                    <label for="">Fecha de pagado</label>
+                                    <input type="date" class="form-control" id="add_fec_pag" name="add_fec_pag" required>
+                                </div>
+                                <div class="form-group mt-3">
+                                    <label for="">Número de Operación</label>
+                                    <input type="text" class="form-control" id="add_nro_ope" name="add_nro_ope" required>
+                                </div>
+                                <div class="form-group mt-3">
+                                    <label for="">Confirmación del Cliente (escriba SI)</label>
+                                    <input type="text" class="form-control" id="add_confirmacion" name="add_confirmacion" required>
+                                </div>
+                                <hr>
+                                <button type="submit" class="btn btn-sm btn-success">
+                                    <i class="fa fa-save"></i> Guardar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="text-body-secondary py-5 bg-dark">
+            <div class="container text-white">
+                <p class="float-end mb-1">
+                    <a href="#">Back to top</a>
+                </p>
+                <p class="mb-1">Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Perferendis commodi neque nulla numquam
+                    ipsum hic iusto explicabo. Eaque ipsum perspiciatis
+                    assumenda rerum cumque, sunt nihil, suscipit, reprehenderit
+                    neque autem quisquam.</p>
+                <p class="mb-0">Developed by <a
+                        href="https://gerardogp.github.io/" target="_blank">gegp</a></p>
+            </div>
+        </footer>
+        <script src="./index.js"></script>
+    <!-- <script src="./database.js"></script>
+    <script src="./app/celular.js"></script> -->
+        <script src="../../app/database.js"></script>
+        <script src="./reparaciones.js"></script>
+    </body>
+</html>

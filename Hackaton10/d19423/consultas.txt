@@ -1,0 +1,11 @@
+//Crear base de datos
+use d19423
+
+//CRUD de USUARIO:
+
+db.usuario.insertOne({nombre:"Roberto", apellido: "Pineda", username: "rpineda", password:"123456", fechaNacimiento:"1983-08-28"})
+db.usuario.findOne({username:"rpineda"})
+db.usuario.updateOne({username:"rpineda"}, {$set:{password:"54321"}})
+db.usuario.deleteOne({username:"rpineda"})
+
+

@@ -1,0 +1,18 @@
+[{
+  "_id": {
+    "$oid": "655a767adcc303aaa25c8fc6"
+  },
+  "Nombre": "Clavos",
+  "Cantidad": 25,
+  "Costo": 14,
+  "Fecha": "2023-11-18"
+},
+{
+  "_id": {
+    "$oid": "655a767adcc303aaa25c8fc7"
+  },
+  "Nombre": "Pintura",
+  "Cantidad": 4,
+  "Costo": 47,
+  "Fecha": "2023-11-18"
+}]

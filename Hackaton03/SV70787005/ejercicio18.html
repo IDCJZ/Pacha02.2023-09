@@ -1,0 +1,42 @@
+<script>
+    // Leer el número identificador del empleado
+var numeroIdentificador = parseInt(prompt("Ingrese el número identificador del empleado:"));
+
+// Leer la cantidad de días que trabajó en la semana
+var diasTrabajados = parseInt(prompt("Ingrese la cantidad de días trabajados en la semana (máximo 6 días):"));
+
+// Validar que la cantidad de días sea válida (menor o igual a 6)
+if (isNaN(diasTrabajados) || diasTrabajados <= 0 || diasTrabajados > 6) {
+  alert("Por favor, ingrese una cantidad válida de días trabajados (entre 1 y 6).");
+} else {
+  var salarioDiario;
+
+  // Determinar el salario diario basado en el número identificador del empleado
+  switch (numeroIdentificador) {
+    case 1:
+      salarioDiario = 56;
+      break;
+    case 2:
+      salarioDiario = 64;
+      break;
+    case 3:
+      salarioDiario = 80;
+      break;
+    case 4:
+      salarioDiario = 48;
+      break;
+    default:
+      alert("Número identificador de empleado no válido.");
+      salarioDiario = 0;
+  }
+
+  if (salarioDiario > 0) {
+    // Calcular el salario total
+    var salarioTotal = salarioDiario * diasTrabajados;
+
+    // Mostrar el salario total al empleado
+    console.log("El salario a pagar al empleado es: $" + salarioTotal);
+  }
+}
+
+</script>

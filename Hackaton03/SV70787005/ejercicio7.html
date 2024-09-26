@@ -1,0 +1,31 @@
+<script>
+    // Leer el tipo de membresía del cliente (A, B o C)
+var tipoMembresia = prompt("Ingrese el tipo de membresía del cliente (A, B o C):");
+
+// Definir los porcentajes de descuento para cada tipo de membresía
+var descuentoTipoA = 10;
+var descuentoTipoB = 15;
+var descuentoTipoC = 20;
+
+// Inicializar el descuento
+var descuento = 0;
+
+// Calcular el descuento basado en el tipo de membresía
+if (tipoMembresia === "A" || tipoMembresia === "a") {
+  descuento = descuentoTipoA;
+} else if (tipoMembresia === "B" || tipoMembresia === "b") {
+  descuento = descuentoTipoB;
+} else if (tipoMembresia === "C" || tipoMembresia === "c") {
+  descuento = descuentoTipoC;
+} else {
+  alert("Tipo de membresía no válido. Por favor, ingrese A, B o C.");
+}
+
+// Mostrar el descuento al cliente
+if (descuento > 0) {
+  alert("El cliente con membresía tipo " + tipoMembresia.toUpperCase() + " tiene un descuento del " + descuento + "%.");
+} else {
+  alert("El cliente no tiene descuento.");
+}
+
+</script>

@@ -1,0 +1,22 @@
+[{
+  "_id": {
+    "$oid": "6558d1d0d409ccdb930223a2"
+  },
+  "Nombre": "Junior",
+  "Apellidos": "Arango Almonacin",
+  "DNI": 55555555,
+  "Dirrecion": "Lima-Lurugancho",
+  "Correo": "Jarango@",
+  "Fecha": "2023-11-12"
+},
+{
+  "_id": {
+    "$oid": "6558d1d0d409ccdb930223a3"
+  },
+  "Nombre": "Juan",
+  "Apellidos": "Torre Garcia",
+  "DNI": 44444444,
+  "Direccion": "Lima-Metropolitana",
+  "Correo": "Jtorres@",
+  "Fecha": "2023-11-12"
+}]

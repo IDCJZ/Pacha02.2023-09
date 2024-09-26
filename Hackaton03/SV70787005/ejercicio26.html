@@ -1,0 +1,33 @@
+<script>
+    // Inicializar variables
+var suma = 0;
+var contador = 0;
+var numero;
+
+// Usar un bucle while para leer los números y calcular la suma
+while (true) {
+  numero = parseFloat(prompt("Ingrese un número positivo (o un número negativo para salir):"));
+
+  // Verificar si el número ingresado es negativo para salir del bucle
+  if (numero < 0) {
+    break;
+  }
+
+  // Verificar si el número ingresado es válido
+  if (!isNaN(numero) && numero >= 0) {
+    suma += numero;
+    contador++;
+  } else {
+    alert("Número no válido. Por favor, ingrese un número positivo.");
+  }
+}
+
+// Calcular la media (promedio) si se ingresaron números positivos
+if (contador > 0) {
+  var media = suma / contador;
+  alert("La media de los números ingresados es: " + media.toFixed(2));
+} else {
+  alert("No se ingresaron números positivos para calcular la media.");
+}
+
+</script>

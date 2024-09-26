@@ -1,0 +1,22 @@
+<script>
+    // Función para calcular el MCD utilizando el algoritmo de Euclides
+function calcularMCD(a, b) {
+  while (b !== 0) {
+    var temp = b;
+    b = a % b;
+    a = temp;
+  }
+  return a;
+}
+
+// Leer dos números del usuario
+var numero1 = parseInt(prompt("Ingrese el primer número:"));
+var numero2 = parseInt(prompt("Ingrese el segundo número:"));
+
+// Calcular el MCD utilizando la función
+var mcd = calcularMCD(numero1, numero2);
+
+// Mostrar el MCD
+alert("El MCD de " + numero1 + " y " + numero2 + " es: " + mcd);
+
+</script>

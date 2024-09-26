@@ -1,0 +1,30 @@
+<script>
+    // Leer el salario actual del trabajador
+var salarioActual = parseFloat(prompt("Ingrese el salario actual del trabajador:"));
+
+// Definir los porcentajes de aumento
+var porcentajeAumentoMayor2000 = 5;
+var porcentajeAumentoMenor2000 = 10;
+
+// Inicializar la variable de aumento
+var aumento = 0;
+
+// Calcular el aumento basado en el salario actual
+if (salarioActual > 2000) {
+  aumento = (salarioActual * porcentajeAumentoMayor2000) / 100;
+} else {
+  aumento = (salarioActual * porcentajeAumentoMenor2000) / 100;
+}
+
+// Calcular el nuevo salario
+var nuevoSalario = salarioActual + aumento;
+
+// Mostrar el aumento y el nuevo salario al trabajador
+if (aumento > 0) {
+  alert("El aumento del trabajador es del " + aumento + "%.");
+  alert("El nuevo salario del trabajador es: $" + nuevoSalario.toFixed(2));
+} else {
+  alert("El trabajador no recibe aumento.");
+}
+
+</script>

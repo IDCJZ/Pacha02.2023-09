@@ -1,0 +1,35 @@
+// Colección para la compra de materia prima
+db123456.materia_prima.insertOne({
+  fecha: ISODate("2023-11-18T12:00:00Z"),
+  proveedor: "Proveedor A",
+  cantidad: 1000,
+  unidad: "kg",
+  costo_total: 5000
+});
+
+// Colección para la compra de insumos
+db123456.insumos.insertOne({
+  fecha: ISODate("2023-11-19T14:30:00Z"),
+  proveedor: "Proveedor B",
+  descripcion: "Insumo X",
+  cantidad: 500,
+  unidad: "unidades",
+  costo_total: 2000
+});
+
+// Colección para la gestión de personal
+db123456.personal.insertOne({
+  empleado_id: 1,
+  nombre: "Juan Perez",
+  puesto: "Operario",
+  salario: 30000,
+  fecha_contratacion: ISODate("2023-11-15T08:00:00Z")
+});
+
+// Colección para la producción
+db123456.produccion.insertOne({
+  fecha: ISODate("2023-11-20T10:00:00Z"),
+  producto: "Armario",
+  cantidad_producida: 50,
+  linea_produccion: "Línea 1"
+});

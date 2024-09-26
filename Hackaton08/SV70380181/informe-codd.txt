@@ -1,0 +1,43 @@
+// Informe sobre las 12 reglas de Codd
+
+Las "12 reglas de Codd" se refieren a los doce principios propuestos por Edgar F. Codd,
+un informático británico considerado el padre de las bases de datos relacionales.
+
+Regla de la Información: 
+Toda la información en una base de datos relacional se representa en forma de valores en una tabla.
+
+Regla del Acceso Garantizado: 
+Cada dato individual debe ser accesible lógicamente mediante una combinación de nombre de tabla, valor clave primaria y columna de columna.
+
+Regla del Sistema de Catálogo Dinámico en Línea Basado en el Modelo Relacional:
+La descripción del sistema (metadatos) debe almacenarse en la base de datos, y debe ser accesible mediante comandos del lenguaje de consulta.
+
+Regla del Tratamiento de Datos Dinámicos: 
+Todos los datos deben ser tratados de la misma manera, sin importar si son datos de usuario o metadatos.
+
+Regla del Lenguaje Integral: 
+Debe haber un lenguaje de consulta integral que admita la definición, manipulación y consulta de datos.
+
+Regla de Vista Garantizada: 
+Debe ser posible definir vistas en la base de datos, que son representaciones lógicas de los datos almacenados, y estas vistas deben ser actualizables.
+
+Regla de Integridad de las Vistas: 
+Las operaciones de actualización (inserción, actualización, eliminación) realizadas a través de vistas deben cumplir con las mismas restricciones de integridad que si se realizaran directamente sobre las tablas subyacentes.
+
+Regla de Independencia Física de los Datos: 
+Los cambios en la estructura física de la base de datos no deben afectar la aplicación que utiliza la base de datos.
+
+Regla de Independencia Lógica de los Datos: 
+Los cambios en la estructura lógica de la base de datos no deben afectar la aplicación que utiliza la base de datos.
+
+Regla de la Integridad de la Distribución: 
+La distribución de los datos en varias ubicaciones (como servidores) debe ser invisible para los usuarios y las aplicaciones.
+
+Regla de la No Subversión: 
+Si un sistema permite el acceso a los datos de nivel inferior, este acceso no debe poder utilizarse para eludir las reglas de integridad de la base de datos.
+
+Regla de la Regla General de la Subversión: 
+Si un sistema de gestión de bases de datos (DBMS) proporciona funcionalidades de alto nivel, como navegación en redes, estos deben ser compatibles con las funciones de nivel más bajo, como consultas de lenguaje SQL.
+
+Estas reglas de Codd proporcionaron los fundamentos teóricos y prácticos para el diseño de 
+sistemas de gestión de bases de datos relacionales, como Oracle, MySQL, SQL Server y PostgreSQL, que son ampliamente utilizados en la actualidad. Cumplir con estas reglas garantiza la consistencia, la integridad y la flexibilidad de las bases de datos relacionales.

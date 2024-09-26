@@ -1,0 +1,34 @@
+<script>
+    // Inicializar variables para la suma y el conteo de números pares e impares
+var sumaPares = 0;
+var sumaImpares = 0;
+var contadorPares = 0;
+var contadorImpares = 0;
+
+// Leer diez números del usuario y calcular la suma de pares e impares
+for (var i = 0; i < 10; i++) {
+  var numero = parseFloat(prompt("Ingrese un número:"));
+
+  if (!isNaN(numero)) { // Verificar si el valor ingresado es un número
+    if (numero % 2 === 0) { // Si es par
+      sumaPares += numero;
+      contadorPares++;
+    } else { // Si es impar
+      sumaImpares += numero;
+      contadorImpares++;
+    }
+  } else {
+    alert("El valor ingresado no es un número. Por favor, ingrese un número válido.");
+    i--; // Restar uno al contador para permitir que el usuario ingrese otro número válido
+  }
+}
+
+// Calcular las medias de números pares e impares
+var mediaPares = contadorPares > 0 ? sumaPares / contadorPares : 0;
+var mediaImpares = contadorImpares > 0 ? sumaImpares / contadorImpares : 0;
+
+// Mostrar las medias
+alert("La media de los números pares ingresados es: " + mediaPares.toFixed(2));
+alert("La media de los números impares ingresados es: " + mediaImpares.toFixed(2));
+
+</script>

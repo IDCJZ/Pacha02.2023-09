@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="nombre_de_la_tienda"></h1>
+    <h2 id="ubicacion"></h2>
+
+    <div id="div_reserva" style="display: none;">
+
+        <label for="">Nombre del cliente:</label>
+        <label for="" id="nombre_cliente"></label>
+        <br>
+        <label for="">Apellido del cliente:</label>
+        <label for="" id="apellido_cliente"></label>
+        <br>
+    </div>
+    <button id="registro">Registro</button>
+    <button id="diagnostico">Primer Diagnostico</button>
+    <button id="asignacion_de_tecnico">Asignacion de Tecnico</button>
+    <button id="estado">Estado del servicio de tu telefono</button>
+    <script src="sv-48305061.js"></script>
+    <script>
+        let parametros = {
+                Nombre: "ServiciosArca",
+                Ubicacion: "Lima"
+                        }
+            ServiciosArca.init(parametros)
+    </script>
+</body>
+
+</html>

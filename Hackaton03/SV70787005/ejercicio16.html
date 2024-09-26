@@ -1,0 +1,32 @@
+<script>
+    // Leer la hora, minutos y segundos del usuario
+var hora = parseInt(prompt("Ingrese la hora (0-23):"));
+var minutos = parseInt(prompt("Ingrese los minutos (0-59):"));
+var segundos = parseInt(prompt("Ingrese los segundos (0-59):"));
+
+// Validar que los valores ingresados sean válidos
+if (isNaN(hora) || isNaN(minutos) || isNaN(segundos) ||
+    hora < 0 || hora > 23 || minutos < 0 || minutos > 59 || segundos < 0 || segundos > 59) {
+  alert("Por favor, ingrese una hora válida en el formato correcto.");
+} else {
+  // Calcular la hora dentro de un segundo
+  segundos++;
+
+  // Verificar y ajustar los valores si es necesario
+  if (segundos === 60) {
+    segundos = 0;
+    minutos++;
+    if (minutos === 60) {
+      minutos = 0;
+      hora++;
+      if (hora === 24) {
+        hora = 0;
+      }
+    }
+  }
+
+  // Mostrar la hora dentro de un segundo
+  console.log("La hora dentro de un segundo es: " + hora + ":" + minutos + ":" + segundos);
+}
+
+</script>

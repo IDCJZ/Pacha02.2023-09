@@ -1,0 +1,30 @@
+<script>
+    // Leer un número entero positivo del 1 al 10 (excluyendo el 9)
+var numero = parseInt(prompt("Ingrese un número entero positivo del 1 al 10 (excluyendo el 9):"));
+
+// Verificar si el número es válido (dentro del rango)
+if (numero >= 1 && numero <= 10 && numero !== 9) {
+  // Función para verificar si un número es primo
+  function esPrimo(n) {
+    if (n <= 1) {
+      return false;
+    }
+    for (var i = 2; i * i <= n; i++) {
+      if (n % i === 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  // Comprobar si el número es primo
+  if (esPrimo(numero)) {
+    alert(numero + " es un número primo.");
+  } else {
+    alert(numero + " no es un número primo.");
+  }
+} else {
+  alert("El número ingresado no es válido.");
+}
+
+</script>

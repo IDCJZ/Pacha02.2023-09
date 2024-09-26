@@ -1,0 +1,20 @@
+[{
+  "_id": {
+    "$oid": "6558f562d409ccdb930223a4"
+  },
+  "Nombre": "TablasContry",
+  "Ruc": {
+    "$numberLong": "2514584444"
+  },
+  "Lugar": "Tacna",
+  "fecha": "2013-10-12"
+},
+{
+  "_id": {
+    "$oid": "6558f562d409ccdb930223a5"
+  },
+  "Nombre": "Tripeyto",
+  "Ruc": "1258745898",
+  "Lugar": "Loreto",
+  "fecha": "2023-10-13"
+}]

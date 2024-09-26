@@ -1,0 +1,22 @@
+<script>
+    // Leer tres números
+var numero1 = parseFloat(prompt("Ingrese el primer número:"));
+var numero2 = parseFloat(prompt("Ingrese el segundo número:"));
+var numero3 = parseFloat(prompt("Ingrese el tercer número:"));
+
+// Inicializar una variable para almacenar el número mayor
+var numeroMayor;
+
+// Comprobar cuál de los números es el mayor
+if (numero1 >= numero2 && numero1 >= numero3) {
+  numeroMayor = numero1;
+} else if (numero2 >= numero1 && numero2 >= numero3) {
+  numeroMayor = numero2;
+} else {
+  numeroMayor = numero3;
+}
+
+// Mostrar el número mayor
+alert("El número mayor es: " + numeroMayor);
+
+</script>
